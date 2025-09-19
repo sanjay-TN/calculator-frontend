@@ -1,4 +1,14 @@
 import { useState } from 'react';
+// src/api.js  (create this helper file)
+export const API = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+// usage example in your components/pages:
+const res = await fetch(`${API}/calculate`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ num1, num2, operator })
+});
+
 
 function App() {
   const [num1, setNum1] = useState('');
