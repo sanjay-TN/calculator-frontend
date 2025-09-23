@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '2rem auto', textAlign: 'center' }}>
+    <div className="card">
       <h1>Calculator</h1>
       <input
         type="number"
